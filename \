@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main (int argc, char *argv[ ])
+{
+  char x = argv[0][0];
+  //FILE *fptr;
+  if (x == 'a'){}
+  else {
+    printf(x);
+  }
+  //fptr = fopen("", "mode");
+
+  return 0;
+
+}
