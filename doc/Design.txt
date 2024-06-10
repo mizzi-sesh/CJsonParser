@@ -1,0 +1,9 @@
+I would like to design a JSON parser.
+
+What can this program do?
+  - A bash command which takes the argument of a JSON file, and then creates a c file which declares the various fields 
+  in the JSON file as c-compatible fields in a header/include file. 
+  - Needs to be able to reliably read JSON formats, accounting for White Spaces and various character formats.
+  - The file needs to be built ready to be included into your c project straight away.
+
+
