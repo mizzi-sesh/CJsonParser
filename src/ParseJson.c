@@ -42,20 +42,26 @@ int ParseArgs(int argc, char *argv[])
         FILE *fptr;
         fptr = fopen(directory, "r");
         if(fptr){
+          int k = 0;
           while(fgets(directory, strlen(argv[i]), fptr)) {
-            printf("%s", directory);
+            // printf("%s", directory);  
+            if (k == 0 && *directory != '\"'){
+            printf("Directory must be enclosed in brackets");
+            return -1;
+            }
+            k++;
           }
-        } else {
+          printf("%s", directory);
+        }
+        else {
           printf("Could not locate or read file provided as argument.\n");
           return -1;
         }
         fclose(fptr);
         return 0;
       }
-
     }
     printf("\n");
-
   }
   printf("\n");
   return 0;
